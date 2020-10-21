@@ -1,0 +1,1551 @@
+2020-10-21 16:31:41 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2_advanced.session' doesn't exist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Command.php(1159): yii\db\Command->internalExecute()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Command.php(427): yii\db\Command->queryInternal()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Query.php(302): yii\db\Command->queryScalar()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/DbSession.php(172): yii\db\Query->scalar()
+#5 [internal function]: yii\web\DbSession->readSession()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#7 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Session.php(630): yii\web\Session->open()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/User.php(685): yii\web\Session->get()
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/User.php(194): yii\web\User->renewAuthStatus()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/User.php(362): yii\web\User->getIdentity()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#12 /var/www/html/advanced/_protected/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(83): yii\base\Component->__get()
+#13 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#14 [internal function]: yii\base\BaseObject->__construct()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2-debug/src/Module.php(247): yii\BaseYii::createObject()
+#19 /var/www/html/advanced/_protected/vendor/yiisoft/yii2-debug/src/Module.php(218): yii\debug\Module->initPanels()
+#20 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#21 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct()
+#22 [internal function]: yii\base\Module->__construct()
+#23 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/di/Container.php(398): ReflectionClass->newInstanceArgs()
+#24 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build()
+#25 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#26 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject()
+#27 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule()
+#28 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#29 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#30 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#31 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct()
+#32 /var/www/html/advanced/index.php(17): yii\base\Application->__construct()
+#33 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2_advanced.session' doesn't exist
+The SQL being executed was: SELECT `data` FROM `session` WHERE `expire`>1603297901 AND `id`='u3e1721k95unnhttf0m437al4s' in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Schema.php:677
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Command.php(1159): yii\db\Command->internalExecute()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Command.php(427): yii\db\Command->queryInternal()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/db/Query.php(302): yii\db\Command->queryScalar()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/DbSession.php(172): yii\db\Query->scalar()
+#5 [internal function]: yii\web\DbSession->readSession()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Session.php(137): session_start()
+#7 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Session.php(630): yii\web\Session->open()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/User.php(685): yii\web\Session->get()
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/User.php(194): yii\web\User->renewAuthStatus()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/User.php(362): yii\web\User->getIdentity()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#12 /var/www/html/advanced/_protected/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(83): yii\base\Component->__get()
+#13 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#14 [internal function]: yii\base\BaseObject->__construct()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/di/Container.php(406): ReflectionClass->newInstanceArgs()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/BaseYii.php(365): yii\di\Container->get()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2-debug/src/Module.php(247): yii\BaseYii::createObject()
+#19 /var/www/html/advanced/_protected/vendor/yiisoft/yii2-debug/src/Module.php(218): yii\debug\Module->initPanels()
+#20 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#21 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct()
+#22 [internal function]: yii\base\Module->__construct()
+#23 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/di/Container.php(398): ReflectionClass->newInstanceArgs()
+#24 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/di/Container.php(165): yii\di\Container->build()
+#25 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/BaseYii.php(345): yii\di\Container->get()
+#26 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject()
+#27 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule()
+#28 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#29 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#30 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#31 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct()
+#32 /var/www/html/advanced/index.php(17): yii\base\Application->__construct()
+#33 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'yii2_advanced.session' doesn't exist
+)
+
+2020-10-21 16:31:41 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52072'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603297901.7772
+    'REQUEST_TIME' => 1603297901
+]
+2020-10-21 16:32:15 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:32:14 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52074'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603297934.1699
+    'REQUEST_TIME' => 1603297934
+]
+2020-10-21 16:34:57 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:34:57 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52106'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603298097.764
+    'REQUEST_TIME' => 1603298097
+]
+2020-10-21 16:46:59 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:46:59 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52158'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603298819.2637
+    'REQUEST_TIME' => 1603298819
+]
+2020-10-21 16:46:59 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:46:59 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52160'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603298819.6289
+    'REQUEST_TIME' => 1603298819
+]
+2020-10-21 16:46:59 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:46:59 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52162'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603298819.9263
+    'REQUEST_TIME' => 1603298819
+]
+2020-10-21 16:52:32 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:52:32 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52278'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603299152.6604
+    'REQUEST_TIME' => 1603299152
+]
+2020-10-21 16:52:35 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:52:35 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52280'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603299155.8359
+    'REQUEST_TIME' => 1603299155
+]
+2020-10-21 16:52:36 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:52:36 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52284'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603299156.3811
+    'REQUEST_TIME' => 1603299156
+]
+2020-10-21 16:52:36 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:52:36 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52286'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603299156.744
+    'REQUEST_TIME' => 1603299156
+]
+2020-10-21 16:52:36 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: /var/www/html/advanced/_protected/vendor/bower/jquery/dist in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php:455
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(185): yii\web\AssetManager->publish()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish()
+#2 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle()
+#3 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(287): yii\web\AssetManager->getBundle()
+#4 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/View.php(292): yii\web\View->registerAssetBundle()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#7 /var/www/html/advanced/_protected/frontend/views/layouts/main.php(12): yii\web\AssetBundle::register()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/a...')
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#10 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(424): yii\base\View->renderFile()
+#11 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(410): yii\base\Controller->renderContent()
+#12 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(89): yii\base\Controller->render()
+#13 [internal function]: frontend\controllers\SiteController->actionIndex()
+#14 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#15 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#16 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#17 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#18 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#19 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#20 {main}
+2020-10-21 16:52:36 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52288'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603299156.9507
+    'REQUEST_TIME' => 1603299156
+]
+2020-10-21 16:55:32 [::1][-][u3e1721k95unnhttf0m437al4s][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'name' of non-object in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/rbac/DbManager.php:852
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/rbac/DbManager.php(852): yii\base\ErrorHandler->handleError()
+#1 /var/www/html/advanced/_protected/common/rbac/helpers/RbacHelper.php(34): yii\rbac\DbManager->assign()
+#2 /var/www/html/advanced/_protected/frontend/models/SignupForm.php(113): common\rbac\helpers\RbacHelper::assignRole()
+#3 /var/www/html/advanced/_protected/frontend/controllers/SiteController.php(286): frontend\models\SignupForm->signup()
+#4 [internal function]: frontend\controllers\SiteController->actionSignup()
+#5 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#6 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#7 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#8 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#9 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#10 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#11 {main}
+2020-10-21 16:55:31 [::1][-][u3e1721k95unnhttf0m437al4s][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'ueBkQZ9NBi-KD0EseiT8JqnN29Ps5mIVFovkw1kkpJmNqSErznxEedJsEGk-QqNRx6Co4JqjUi0k75albGDq_Q=='
+    'SignupForm' => [
+        'username' => 'mhdriyas'
+        'email' => 'mhdriyas1994@gmail.com'
+        'password' => '12345678'
+    ]
+    'signup-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'u3e1721k95unnhttf0m437al4s'
+    '_csrf' => 'f45cdd841676dd0db3f3c47d97b46c83f1c2b9a6ab28e92e4db717f9759882c2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4IEjQ1BVXcQEDf_wnms3vE082drf5DNd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+    '__captcha/site/captcha' => 'duhexe'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/advanced/site/signup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=u3e1721k95unnhttf0m437al4s; _csrf=f45cdd841676dd0db3f3c47d97b46c83f1c2b9a6ab28e92e4db717f9759882c2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224IEjQ1BVXcQEDf_wnms3vE082drf5DNd%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52368'
+    'REDIRECT_URL' => '/advanced/site/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/site/signup'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603299331.9391
+    'REQUEST_TIME' => 1603299331
+]
+2020-10-21 17:20:13 [::1][1][qrs7r8le230ark8g03bdfhr1u5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#2 {main}
+2020-10-21 17:20:12 [::1][1][qrs7r8le230ark8g03bdfhr1u5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'qrs7r8le230ark8g03bdfhr1u5'
+    '_identity' => 'bfdbb4a8e91e87c7e0ee11f184ab164300b2f45d9e7d2d879d38d632bc24f2c2a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"xIK-Ppl3xeP4nGSmuVwGKFWwh392ReAg\",2592000]\";}'
+    '_csrf' => '6140db2e9cb6de75b15f50ef6f78f7af8c2e983066ad1a7a4c6b719daa2cdcb0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l7f4IME8K8y2kwJWj1R55C_YvZP9LOMk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+    '__captcha/site/captcha' => 'duhexe'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=qrs7r8le230ark8g03bdfhr1u5; _identity=bfdbb4a8e91e87c7e0ee11f184ab164300b2f45d9e7d2d879d38d632bc24f2c2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22xIK-Ppl3xeP4nGSmuVwGKFWwh392ReAg%22%2C2592000%5D%22%3B%7D; _csrf=6140db2e9cb6de75b15f50ef6f78f7af8c2e983066ad1a7a4c6b719daa2cdcb0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22l7f4IME8K8y2kwJWj1R55C_YvZP9LOMk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52562'
+    'REDIRECT_URL' => '/advanced/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/admin'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603300812.9898
+    'REQUEST_TIME' => 1603300812
+]
+2020-10-21 17:20:46 [::1][1][qrs7r8le230ark8g03bdfhr1u5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#2 {main}
+2020-10-21 17:20:46 [::1][1][qrs7r8le230ark8g03bdfhr1u5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'qrs7r8le230ark8g03bdfhr1u5'
+    '_identity' => 'bfdbb4a8e91e87c7e0ee11f184ab164300b2f45d9e7d2d879d38d632bc24f2c2a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"xIK-Ppl3xeP4nGSmuVwGKFWwh392ReAg\",2592000]\";}'
+    '_csrf' => '6140db2e9cb6de75b15f50ef6f78f7af8c2e983066ad1a7a4c6b719daa2cdcb0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l7f4IME8K8y2kwJWj1R55C_YvZP9LOMk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+    '__captcha/site/captcha' => 'duhexe'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=qrs7r8le230ark8g03bdfhr1u5; _identity=bfdbb4a8e91e87c7e0ee11f184ab164300b2f45d9e7d2d879d38d632bc24f2c2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22xIK-Ppl3xeP4nGSmuVwGKFWwh392ReAg%22%2C2592000%5D%22%3B%7D; _csrf=6140db2e9cb6de75b15f50ef6f78f7af8c2e983066ad1a7a4c6b719daa2cdcb0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22l7f4IME8K8y2kwJWj1R55C_YvZP9LOMk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52574'
+    'REDIRECT_URL' => '/advanced/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/admin'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603300846.8155
+    'REQUEST_TIME' => 1603300846
+]
+2020-10-21 17:20:47 [::1][1][qrs7r8le230ark8g03bdfhr1u5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#2 {main}
+2020-10-21 17:20:47 [::1][1][qrs7r8le230ark8g03bdfhr1u5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'qrs7r8le230ark8g03bdfhr1u5'
+    '_identity' => 'bfdbb4a8e91e87c7e0ee11f184ab164300b2f45d9e7d2d879d38d632bc24f2c2a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"xIK-Ppl3xeP4nGSmuVwGKFWwh392ReAg\",2592000]\";}'
+    '_csrf' => '6140db2e9cb6de75b15f50ef6f78f7af8c2e983066ad1a7a4c6b719daa2cdcb0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l7f4IME8K8y2kwJWj1R55C_YvZP9LOMk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+    '__captcha/site/captcha' => 'duhexe'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=qrs7r8le230ark8g03bdfhr1u5; _identity=bfdbb4a8e91e87c7e0ee11f184ab164300b2f45d9e7d2d879d38d632bc24f2c2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22xIK-Ppl3xeP4nGSmuVwGKFWwh392ReAg%22%2C2592000%5D%22%3B%7D; _csrf=6140db2e9cb6de75b15f50ef6f78f7af8c2e983066ad1a7a4c6b719daa2cdcb0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22l7f4IME8K8y2kwJWj1R55C_YvZP9LOMk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52574'
+    'REDIRECT_URL' => '/advanced/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/admin'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603300847.7582
+    'REQUEST_TIME' => 1603300847
+]
+2020-10-21 17:20:48 [::1][1][qrs7r8le230ark8g03bdfhr1u5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin". in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#2 {main}
+2020-10-21 17:20:48 [::1][1][qrs7r8le230ark8g03bdfhr1u5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'qrs7r8le230ark8g03bdfhr1u5'
+    '_identity' => 'bfdbb4a8e91e87c7e0ee11f184ab164300b2f45d9e7d2d879d38d632bc24f2c2a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"xIK-Ppl3xeP4nGSmuVwGKFWwh392ReAg\",2592000]\";}'
+    '_csrf' => '6140db2e9cb6de75b15f50ef6f78f7af8c2e983066ad1a7a4c6b719daa2cdcb0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"l7f4IME8K8y2kwJWj1R55C_YvZP9LOMk\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+    '__captcha/site/captcha' => 'duhexe'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=qrs7r8le230ark8g03bdfhr1u5; _identity=bfdbb4a8e91e87c7e0ee11f184ab164300b2f45d9e7d2d879d38d632bc24f2c2a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22xIK-Ppl3xeP4nGSmuVwGKFWwh392ReAg%22%2C2592000%5D%22%3B%7D; _csrf=6140db2e9cb6de75b15f50ef6f78f7af8c2e983066ad1a7a4c6b719daa2cdcb0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22l7f4IME8K8y2kwJWj1R55C_YvZP9LOMk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '52574'
+    'REDIRECT_URL' => '/advanced/admin'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/admin'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603300848.4193
+    'REQUEST_TIME' => 1603300848
+]
+2020-10-21 18:13:09 [::1][1][qrs7r8le230ark8g03bdfhr1u5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin/". in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:13:09 [::1][1][qrs7r8le230ark8g03bdfhr1u5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'qrs7r8le230ark8g03bdfhr1u5'
+    '_csrf-backend' => 'e98c8e14a594ae4cdeab5dbfee95984f49f00ce7aa61feb1427506eaea871c57a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"64IKJOMHB9NmcnJg7q7f5N6LdenC4O_i\";}'
+    '_csrf' => '08e7fc2d7cc7b63d7d9e922521a7180864bb8c152d5de2682af3272d9dbc61a1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"by7z_Ltlmh3nU-f6WTE77aejk5lHzCIE\";}'
+    '_csrf-frontend' => '9a1b6c91d51cf44a6f7173e3ba08d63ca4dad34f7a5a49852b6ea84eba173bcea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Pa03cu2ZmpZDXXf7bPaDbODqDRWchb9C\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+    '__captcha/site/captcha' => 'duhexe'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=qrs7r8le230ark8g03bdfhr1u5; _csrf-backend=e98c8e14a594ae4cdeab5dbfee95984f49f00ce7aa61feb1427506eaea871c57a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2264IKJOMHB9NmcnJg7q7f5N6LdenC4O_i%22%3B%7D; _csrf=08e7fc2d7cc7b63d7d9e922521a7180864bb8c152d5de2682af3272d9dbc61a1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22by7z_Ltlmh3nU-f6WTE77aejk5lHzCIE%22%3B%7D; _csrf-frontend=9a1b6c91d51cf44a6f7173e3ba08d63ca4dad34f7a5a49852b6ea84eba173bcea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Pa03cu2ZmpZDXXf7bPaDbODqDRWchb9C%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '53666'
+    'REDIRECT_URL' => '/advanced/backend/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/admin/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603303989.5871
+    'REQUEST_TIME' => 1603303989
+]
+2020-10-21 18:13:17 [::1][1][qrs7r8le230ark8g03bdfhr1u5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "backend/". in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:13:17 [::1][1][qrs7r8le230ark8g03bdfhr1u5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'qrs7r8le230ark8g03bdfhr1u5'
+    '_csrf-backend' => 'e98c8e14a594ae4cdeab5dbfee95984f49f00ce7aa61feb1427506eaea871c57a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"64IKJOMHB9NmcnJg7q7f5N6LdenC4O_i\";}'
+    '_csrf' => '08e7fc2d7cc7b63d7d9e922521a7180864bb8c152d5de2682af3272d9dbc61a1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"by7z_Ltlmh3nU-f6WTE77aejk5lHzCIE\";}'
+    '_csrf-frontend' => '9a1b6c91d51cf44a6f7173e3ba08d63ca4dad34f7a5a49852b6ea84eba173bcea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Pa03cu2ZmpZDXXf7bPaDbODqDRWchb9C\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+    '__captcha/site/captcha' => 'duhexe'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_PURPOSE' => 'prefetch'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=qrs7r8le230ark8g03bdfhr1u5; _csrf-backend=e98c8e14a594ae4cdeab5dbfee95984f49f00ce7aa61feb1427506eaea871c57a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2264IKJOMHB9NmcnJg7q7f5N6LdenC4O_i%22%3B%7D; _csrf=08e7fc2d7cc7b63d7d9e922521a7180864bb8c152d5de2682af3272d9dbc61a1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22by7z_Ltlmh3nU-f6WTE77aejk5lHzCIE%22%3B%7D; _csrf-frontend=9a1b6c91d51cf44a6f7173e3ba08d63ca4dad34f7a5a49852b6ea84eba173bcea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Pa03cu2ZmpZDXXf7bPaDbODqDRWchb9C%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '53666'
+    'REDIRECT_URL' => '/advanced/backend/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/backend/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603303997.9296
+    'REQUEST_TIME' => 1603303997
+]
+2020-10-21 18:13:19 [::1][1][qrs7r8le230ark8g03bdfhr1u5][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "backend/". in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#1 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#2 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/advanced/_protected/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/advanced/_protected/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#1 /var/www/html/advanced/index.php(18): yii\base\Application->run()
+#2 {main}
+2020-10-21 18:13:19 [::1][1][qrs7r8le230ark8g03bdfhr1u5][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1979271088.1602494961'
+    '_identity-frontend' => '0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    '_identity-backend' => 'b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR\",2592000]\";}'
+    'PHPSESSID' => 'qrs7r8le230ark8g03bdfhr1u5'
+    '_csrf-backend' => 'e98c8e14a594ae4cdeab5dbfee95984f49f00ce7aa61feb1427506eaea871c57a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"64IKJOMHB9NmcnJg7q7f5N6LdenC4O_i\";}'
+    '_csrf' => '08e7fc2d7cc7b63d7d9e922521a7180864bb8c152d5de2682af3272d9dbc61a1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"by7z_Ltlmh3nU-f6WTE77aejk5lHzCIE\";}'
+    '_csrf-frontend' => '9a1b6c91d51cf44a6f7173e3ba08d63ca4dad34f7a5a49852b6ea84eba173bcea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Pa03cu2ZmpZDXXf7bPaDbODqDRWchb9C\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/advanced/backend/'
+    '__captcha/site/captcha' => 'duhexe'
+    '__captcha/site/captchacount' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_ga=GA1.1.1979271088.1602494961; _identity-frontend=0d02b11f4687a7544bff8262461542f18f01aed580a4cf918da29d148253938ea%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; _identity-backend=b2bb31b66e1209a5a66cc455b624077a898d44bb95eafcb855b52c505c992711a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22Qh7VfksK2SI_iZxDAgN2Urq9jHvWnvOR%22%2C2592000%5D%22%3B%7D; PHPSESSID=qrs7r8le230ark8g03bdfhr1u5; _csrf-backend=e98c8e14a594ae4cdeab5dbfee95984f49f00ce7aa61feb1427506eaea871c57a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2264IKJOMHB9NmcnJg7q7f5N6LdenC4O_i%22%3B%7D; _csrf=08e7fc2d7cc7b63d7d9e922521a7180864bb8c152d5de2682af3272d9dbc61a1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22by7z_Ltlmh3nU-f6WTE77aejk5lHzCIE%22%3B%7D; _csrf-frontend=9a1b6c91d51cf44a6f7173e3ba08d63ca4dad34f7a5a49852b6ea84eba173bcea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Pa03cu2ZmpZDXXf7bPaDbODqDRWchb9C%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/advanced/index.php'
+    'REMOTE_PORT' => '53672'
+    'REDIRECT_URL' => '/advanced/backend/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/backend/'
+    'SCRIPT_NAME' => '/advanced/index.php'
+    'PHP_SELF' => '/advanced/index.php'
+    'REQUEST_TIME_FLOAT' => 1603303999.8288
+    'REQUEST_TIME' => 1603303999
+]
